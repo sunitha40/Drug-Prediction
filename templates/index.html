@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Prediction</title>
+</head>
+<body>
+<div>
+<h1>Drug Prediction</h1>
+
+
+
+<form action="{{url_for('predict')}}" method="post">
+<input type="number" name="Age" placeholder="Age of the person" required="required"/>
+<input type="number" name="Sex" min="0" max="1" placeholder="Gender of the Person" required="required"/>
+<input type="number" name="BP" min="0" max="2" placeholder="Bp of the person" required="required"/>
+<input type="number" name="Cholesterol" min="1" max="2" placeholder="Cholesterol of the person" required="required"/>
+<input type="number" name="Na_to_K" placeholder="Na_to_K of the person" required="required"/>
+
+
+
+<button type="submit" class="btn btn-success">DrugType</button>
+
+
+
+</form>
+
+
+
+<br>
+
+
+
+{{ prediction_text}}
+</div>
+    
+</body>
+</html>
